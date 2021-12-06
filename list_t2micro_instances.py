@@ -14,10 +14,8 @@ def lambda_handler(event, context):
     for instance_detail in instances_full_details:
         
         group_instances = instance_detail['Instances']
-        print(group_instances)
         for instance in group_instances:
-            print(instance)
             instance_id = instance['InstanceId']
             instance_ids.append(instance_id)
-
-    print(instance_ids)
+            
+    return instance_ids
